@@ -1,4 +1,4 @@
-package com.toy.restaurant.user;
+package com.toy.restaurant.user.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
