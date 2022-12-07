@@ -1,10 +1,12 @@
-package com.toy.restaurant.user;
+package com.toy.restaurant.user.service;
 
 import java.util.List;
-import com.toy.restaurant.user.UserDto;
+import java.util.Map;
+
+import com.toy.restaurant.user.dto.UserDto;
+import com.toy.restaurant.user.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import com.toy.restaurant.user.UserMapper;
 
 @Service
 @RequiredArgsConstructor
@@ -14,5 +16,10 @@ public class UserServiceImpl implements UserService{
     @Override
     public List<UserDto> getUserList() {
         return userMapper.getUserList();
+    }
+
+    @Override
+    public UserDto loginUser(Map<String, String> map) {
+        return userMapper.loginUser(map);
     }
 }
